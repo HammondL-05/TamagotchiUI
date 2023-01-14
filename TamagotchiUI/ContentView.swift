@@ -7,10 +7,26 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    let tamagotchiNames = Names()
+    var selectedName: Int = 0
+    let tamagotchi = Tamagotchi(name: tamagotchiNames.names[selectedName])
+    
+    
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Form {
+            VStack {
+                Text(tamagotchi.displayStats())
+            }
+            Section {
+                Button("Change Name", action: {
+                    
+                }
+            }
     }
 }
 
