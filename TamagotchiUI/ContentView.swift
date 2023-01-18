@@ -11,22 +11,24 @@ import SwiftUI
 
 struct ContentView: View {
     let tamagotchiNames = Names()
-    var selectedName: Int = 0
-    let tamagotchi = Tamagotchi(name: tamagotchiNames.names[selectedName])
-    
-    
-    
+    @StateObject var tamagotchi = Tamagotchi()
     
     var body: some View {
+        
         Form {
-            VStack {
+            VStack(alignment: .leading,
+                   spacing: 10) {
                 Text(tamagotchi.displayStats())
             }
             Section {
                 Button("Change Name", action: {
-                    
-                }
+                    //change name
+                })
+                Button("Feed \(tamagotchiNames.names[selectedName])", action: {
+                    tamagotchi.changeHunger(change: -1)
+                })
             }
+        }
     }
 }
 
