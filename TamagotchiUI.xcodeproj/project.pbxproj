@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36D6079F29A9320A00C59753 /* TamagotchiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6079E29A9320A00C59753 /* TamagotchiImage.swift */; };
+		36D607A229A936C700C59753 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D607A129A936C700C59753 /* FileManager.swift */; };
+		36D607A529A937E200C59753 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D607A429A937E200C59753 /* StateController.swift */; };
 		F82BB9662972C05500F79E8F /* TamagotchiUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BB9652972C05500F79E8F /* TamagotchiUIApp.swift */; };
 		F82BB9682972C05500F79E8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BB9672972C05500F79E8F /* ContentView.swift */; };
 		F82BB96A2972C05700F79E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F82BB9692972C05700F79E8F /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36D6079E29A9320A00C59753 /* TamagotchiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiImage.swift; sourceTree = "<group>"; };
+		36D607A129A936C700C59753 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		36D607A429A937E200C59753 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		F82BB9622972C05500F79E8F /* TamagotchiUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TamagotchiUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82BB9652972C05500F79E8F /* TamagotchiUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiUIApp.swift; sourceTree = "<group>"; };
 		F82BB9672972C05500F79E8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36D607A029A936B300C59753 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36D607A129A936C700C59753 /* FileManager.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		36D607A329A9374200C59753 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F82BB98F2972C09B00F79E8F /* Tamagotchi.swift */,
+				F82BB9912972C26200F79E8F /* Names.swift */,
+				36D6079E29A9320A00C59753 /* TamagotchiImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36D607A629A9382A00C59753 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F82BB9672972C05500F79E8F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F82BB9592972C05500F79E8F = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +130,13 @@
 		F82BB9642972C05500F79E8F /* TamagotchiUI */ = {
 			isa = PBXGroup;
 			children = (
-				F82BB9652972C05500F79E8F /* TamagotchiUIApp.swift */,
-				F82BB9672972C05500F79E8F /* ContentView.swift */,
+				36D607A029A936B300C59753 /* Extensions */,
+				36D607A629A9382A00C59753 /* View */,
+				36D607A329A9374200C59753 /* Model */,
 				F82BB9692972C05700F79E8F /* Assets.xcassets */,
+				F82BB9652972C05500F79E8F /* TamagotchiUIApp.swift */,
+				36D607A429A937E200C59753 /* StateController.swift */,
 				F82BB96B2972C05700F79E8F /* Preview Content */,
-				F82BB98F2972C09B00F79E8F /* Tamagotchi.swift */,
-				F82BB9912972C26200F79E8F /* Names.swift */,
 			);
 			path = TamagotchiUI;
 			sourceTree = "<group>";
@@ -264,8 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82BB9682972C05500F79E8F /* ContentView.swift in Sources */,
+				36D607A529A937E200C59753 /* StateController.swift in Sources */,
+				36D607A229A936C700C59753 /* FileManager.swift in Sources */,
 				F82BB9902972C09B00F79E8F /* Tamagotchi.swift in Sources */,
 				F82BB9922972C26200F79E8F /* Names.swift in Sources */,
+				36D6079F29A9320A00C59753 /* TamagotchiImage.swift in Sources */,
 				F82BB9662972C05500F79E8F /* TamagotchiUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
