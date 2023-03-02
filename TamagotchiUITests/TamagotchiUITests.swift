@@ -10,27 +10,63 @@ import XCTest
 
 class TamagotchiUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testChangeHealthChangesHealthByCorrectAmount() {
+        //arrange
+        let tamagotchi = Tamagotchi()
+        let change = -1
+        let expected = tamagotchi.getHealth() + change
+        //act
+        tamagotchi.changeHealth(change: change)
+        let actual = tamagotchi.getHealth()
+        //assert
+        XCTAssertEqual(actual, expected)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testChangeHungerChangesHungerByCorrectAmount() {
+        //arrange
+        let tamagotchi = Tamagotchi()
+        let change = -1
+        let expected = tamagotchi.getHunger() + change
+        //act
+        tamagotchi.changeHunger(change: change)
+        let actual = tamagotchi.getHunger()
+        //assert
+        XCTAssertEqual(actual, expected)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testChangeWeightChangesWeightByCorrectAmount() {
+        //arrange
+        let tamagotchi = Tamagotchi()
+        let change = -1
+        let expected = tamagotchi.getWeight() + change
+        //act
+        tamagotchi.changeWeight(change: change)
+        let actual = tamagotchi.getWeight()
+        //assert
+        XCTAssertEqual(actual, expected)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testChangeHappinessChangesHappinessByCorrectAmount() {
+        //arrange
+        let tamagotchi = Tamagotchi()
+        let change = -1
+        let expected = tamagotchi.getHappiness() + change
+        //act
+        tamagotchi.changeHappiness(change: change)
+        let actual = tamagotchi.getHappiness()
+        //assert
+        XCTAssertEqual(actual, expected)
     }
-
+    
+    func testCheckIfDeadChecksIfDead() {
+        //arrange
+        let tamagotchi = Tamagotchi()
+        //act
+        tamagotchi.changeHealth(change: -10)
+        tamagotchi.checkIfDead()
+        let actual = tamagotchi.getAlive()
+        let expected = false
+        //assert
+        XCTAssertEqual(actual, expected)
+    }
 }
