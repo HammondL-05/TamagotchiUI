@@ -33,18 +33,18 @@ struct ContentView: View {
             Section {
                 Button("Change Name", action: {
                     tamagotchi.changeName()
-//                    state.saveToFile()
+                    state.saveToFile()
                 }).disabled(isDead)
                 
                 Button("Change Tamagotchi", action :{
                     image = tamagotchi.changeImage()
-//                    state.saveToFile()
+                    state.saveToFile()
                 }).disabled(isDead)
                 
                 Button("Feed \(tamagotchi.name)", action: {
                     tamagotchi.changeHunger(change: +1)
                     tamagotchi.changeWeight(change: +1)
-//                    state.saveToFile()
+                    state.saveToFile()
                 }).foregroundColor(buttonColour).disabled(feedingDisabled).disabled(isDead)
                 
                 Button("Exercise", action: {
@@ -52,24 +52,24 @@ struct ContentView: View {
                     tamagotchi.changeHealth(change: 1)
                     tamagotchi.changeWeight(change: -1)
                     tamagotchi.changeHunger(change: -1)
-//                    state.saveToFile()
+                    state.saveToFile()
                 }).disabled(isDead)
                 
                 Button("Play", action: {
                     tamagotchi.changeHappiness(change: 1)
-//                    state.saveToFile()
+                    state.saveToFile()
                 }).disabled(isDead)
                 
                 Button("Clean Up", action: {
                     tamagotchi.cleanUp()
-//                    state.saveToFile()
+                    state.saveToFile()
                 }).disabled(isDead)
 
             }
         }.onAppear {
             tamagotchi.startAging()
             tamagotchi.beginsToPoo()
-        }//.onAppear(perform: state.loadFromFile())
+        }
     }
     var isDead: Bool {
         if tamagotchi.getAlive() == false {
